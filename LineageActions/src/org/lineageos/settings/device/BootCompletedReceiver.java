@@ -45,7 +45,7 @@ public class BootCompletedReceiver extends BroadcastReceiver {
         Log.i(TAG, "Booting");
         context.startService(new Intent(context, ServiceWrapper.class));
 
-	if (sOverlayService == null) {
+        if (sOverlayService == null) {
             sOverlayService = new OverlayManager();
         }
         try {
@@ -94,5 +94,5 @@ public class BootCompletedReceiver extends BroadcastReceiver {
                 throws RemoteException {
             return mService.getOverlayInfo(target, userId);
         }
-    }    
+    }
 }
